@@ -1,0 +1,5 @@
+# Receipt.png file to 'searchable' pdf file
+file=r'/home/frederic/Documents/Rognac/Conseils Municipaux/Rognac Mag'
+PDF = pytesseract.image_to_pdf_or_hocr(file, extension='pdf')# export to searchable.pdf
+with open("searchable.pdf", "w+b") as f:
+    f.write(bytearray(PDF))
