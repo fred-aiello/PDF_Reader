@@ -1,3 +1,4 @@
+import streamlit as st
 import pytesseract
 from pytesseract import Output
 from PIL import Image
