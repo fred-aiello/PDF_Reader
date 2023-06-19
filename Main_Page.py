@@ -4,12 +4,12 @@ from PIL import Image
 import pandas as pd
 from pdf2image import convert_from_path
 import PyPDF2
-import cv2
-import io
-import os
-import tabula
-import tabulate
-import camelot.io as camelot
+#import cv2
+#import io
+#import os
+#import tabula
+#import tabulate
+#import camelot.io as camelot
 
 
 
