@@ -2,14 +2,18 @@
 import streamlit as st
 import os
 
-# File selector
-def file_selector(folder_path='.'):
-    filenames = os.listdir(folder_path)
-    selected_filename = st.selectbox('Select a file', filenames)
-    return os.path.join(folder_path, selected_filename)
+uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+for uploaded_file in uploaded_files:
+    bytes_data = uploaded_file.read()
+    st.write("filename:", uploaded_file.name)
+    st.write(bytes_data)
 
-filename = file_selector()
-st.write('You selected `%s`' % filename)
+## first file in current dir (with full path)
+file = os.path.join(os.getcwd(), os.listdir(os.getcwd())[0])
+st.wrtie(file)
+
+
+
 
 path = folder_path
 
