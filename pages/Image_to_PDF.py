@@ -10,7 +10,7 @@ for uploaded_file in uploaded_files:
 
 ## first file in current dir (with full path)
 file = os.path.join(os.getcwd(), os.listdir(os.getcwd())[0])
-st.wrtie(file)
+st.wrtie("TEST RESULT PATH:",file)
 
 
 
