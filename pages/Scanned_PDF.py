@@ -28,12 +28,22 @@ st.markdown(
 """
 )
 
-pdf_writer = PyPDF2.PdfFileWriter()
-images = convert_from_path(os.path.join(path,file))
+path_init = st.text_input("Enter path where images are stored")
+path_final = st.text_input("Enter path where searchable pdf have to be saved")
 
-for image in images:
-    page = pytesseract.image_to_pdf_or_hocr(image, extension='pdf')
+all_files = []
+for (path_init,dirs,files) in os.walk(path):
+    
+    for file in sorted(files):
+        file = os.path.join(path_init, file)
+        print('file',file)
+        all_files.append(file)
+        pdf_writer = PyPDF2.PdfFileWriter()
+for file in all_files:
+    page = pytesseract.image_to_pdf_or_hocr(file, extension='pdf')
     pdf = PyPDF2.PdfFileReader(io.BytesIO(page))
-    pdf_writer.addPage(pdf.getPage(0))# export the searchable PDF to searchable.pdf
-with open(path + "/searchable.pdf", "wb") as f:
+    pdf_writer.addPage(pdf.getPage(0))
+    
+    
+with open(path_final + "/Test.pdf", "wb") as f:
     pdf_writer.write(f)
