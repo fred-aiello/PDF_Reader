@@ -5,7 +5,7 @@ from PIL import Image
 import pandas as pd
 from pdf2image import convert_from_path
 import PyPDF2
-import os
+#import os
 from functions.test import calcul
 
 st.write("# Convert a scanned PDF document into a searchable PDF file 👋")
