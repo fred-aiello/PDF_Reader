@@ -6,6 +6,7 @@ import pandas as pd
 from pdf2image import convert_from_path
 import PyPDF2
 import os
+from functions.add import add
 
 st.write("# Convert a scanned PDF document into a searchable PDF file 👋")
 
@@ -28,6 +29,7 @@ st.markdown(
     - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
+st.write("TEST:",add(3,1))
 
 path_init = st.text_input("Enter path where images are stored")
 path_final = st.text_input("Enter path where searchable pdf have to be saved")
