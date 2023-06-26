@@ -1,3 +1,11 @@
+import streamlit as st
+import pytesseract
+from pytesseract import Output
+from PIL import Image
+import pandas as pd
+from pdf2image import convert_from_path
+import PyPDF2
+
 st.write("# Convert a scanned PDF document into a searchable PDF file 👋")
 
 st.sidebar.success("Select a demo above.")
