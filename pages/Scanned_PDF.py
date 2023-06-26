@@ -6,7 +6,7 @@ import pandas as pd
 from pdf2image import convert_from_path
 import PyPDF2
 import os
-from functions.add import add
+from functions.test import add
 
 st.write("# Convert a scanned PDF document into a searchable PDF file 👋")
 
