@@ -43,10 +43,10 @@ input = st.text_input("Enter path where searchable pdf have to be saved")
 path_final='r/'+input
 
 all_files = []
-for (path_init,dirs,files) in os.walk(path):
+for (path,dirs,files) in os.walk(path_init):
     
     for file in sorted(files):
-        file = os.path.join(path_init, file)
+        file = os.path.join(path, file)
         st.write('file: ',file)
         all_files.append(file)
         pdf_writer = PyPDF2.PdfFileWriter()
