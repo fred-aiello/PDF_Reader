@@ -6,9 +6,11 @@ import pandas as pd
 from pdf2image import convert_from_path
 import PyPDF2
 import os
-from functions.test import calcul
+# from functions.test import calcul
 
-
+## first file in current dir (with full path)
+file = os.path.join(os.getcwd(), os.listdir(os.getcwd())[0])
+st.write("TEST RESULT PATH:",file)
 
 st.write("# Convert a scanned PDF document into a searchable PDF file 👋")
 
