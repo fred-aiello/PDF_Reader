@@ -44,14 +44,14 @@ for (path_init,dirs,files) in os.walk(path):
     
     for file in sorted(files):
         file = os.path.join(path_init, file)
-        print('file',file)
+        st.write('file: ',file)
         all_files.append(file)
-        pdf_writer = PyPDF2.PdfFileWriter()
+        pdf_w riter = PyPDF2.PdfFileWriter()
 for file in all_files:
     page = pytesseract.image_to_pdf_or_hocr(file, extension='pdf')
     pdf = PyPDF2.PdfFileReader(io.BytesIO(page))
     pdf_writer.addPage(pdf.getPage(0))
     
     
-with open(path_final + "/Test.pdf", "wb") as f:
+with open(path_final + "/Conso.pdf", "wb") as f:
     pdf_writer.write(f)
