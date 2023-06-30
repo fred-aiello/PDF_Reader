@@ -37,7 +37,7 @@ st.markdown(
 # st.write(calcul(3,1))
 
 path_init = st.text_input("Enter path where images are stored")
-st.write('r' & path_init)
+st.write('r' + path_init)
 path_final = st.text_input("Enter path where searchable pdf have to be saved")
 
 all_files = []
