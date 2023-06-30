@@ -45,6 +45,8 @@ st.write("path final: ", path_final)
 
 all_files = []
 for (path,dirs,files) in os.walk(path_init):
+
+    st.write("PATH :",path)
     
     for file in sorted(files):
         file = os.path.join(path, file)
