@@ -34,7 +34,7 @@ st.markdown(
     - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
 """
 )
-st.write(calcul(3,1))
+# st.write(calcul(3,1))
 
 path_init = st.text_input("Enter path where images are stored")
 path_final = st.text_input("Enter path where searchable pdf have to be saved")
