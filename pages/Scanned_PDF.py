@@ -51,6 +51,7 @@ for (path,dirs,files) in os.walk(path_init):
         st.write('file: ',file)
         all_files.append(file)
         pdf_writer = PyPDF2.PdfFileWriter()
+        st.wrtie(all_files)
 for file in all_files:
     page = pytesseract.image_to_pdf_or_hocr(file, extension='pdf')
     pdf = PyPDF2.PdfFileReader(io.BytesIO(page))
