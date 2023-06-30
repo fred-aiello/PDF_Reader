@@ -37,10 +37,10 @@ st.markdown(
 # st.write(calcul(3,1))
 
 input = st.text_input("Enter path where images are stored")
-path_init="r/'"+input+"'"
+path_init="r'/"+input+"'"
 st.write(path_init)
 input = st.text_input("Enter path where searchable pdf have to be saved")
-path_final="r/'"+input+"'"
+path_final="r'/"+input+"'"
 st.write("path final: ", path_final)
 st.write("Before :",os.getcwd())
 os.chdir(path_init)
