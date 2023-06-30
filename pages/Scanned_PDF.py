@@ -37,6 +37,7 @@ st.markdown(
 # st.write(calcul(3,1))
 
 path_init = st.text_input("Enter path where images are stored")
+st.write('r' & path_init)
 path_final = st.text_input("Enter path where searchable pdf have to be saved")
 
 all_files = []
@@ -46,7 +47,7 @@ for (path_init,dirs,files) in os.walk(path):
         file = os.path.join(path_init, file)
         st.write('file: ',file)
         all_files.append(file)
-        pdf_w riter = PyPDF2.PdfFileWriter()
+        pdf_writer = PyPDF2.PdfFileWriter()
 for file in all_files:
     page = pytesseract.image_to_pdf_or_hocr(file, extension='pdf')
     pdf = PyPDF2.PdfFileReader(io.BytesIO(page))
