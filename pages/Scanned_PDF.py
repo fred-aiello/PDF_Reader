@@ -11,6 +11,7 @@ import os
 ## first file in current dir (with full path)
 file = os.path.join(os.getcwd(), os.listdir(os.getcwd())[0])
 st.write("TEST RESULT PATH:",file)
+st.write(os.getcwd())
 
 st.write("# Convert a scanned PDF document into a searchable PDF file 👋")
 
