@@ -41,6 +41,7 @@ path_init='r/'+input
 st.write(path_init)
 input = st.text_input("Enter path where searchable pdf have to be saved")
 path_final='r/'+input
+st.write("path final: ", path_final)
 
 all_files = []
 for (path,dirs,files) in os.walk(path_init):
