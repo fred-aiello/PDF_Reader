@@ -60,5 +60,5 @@ for file in all_files:
     pdf_writer.addPage(pdf.getPage(0))
     
     
-with open(path_final + "/Conso.pdf", "wb") as f:
-    pdf_writer.write(f)
+# with open(path_final + "/Conso.pdf", "wb") as f:
+#    pdf_writer.write(f)
