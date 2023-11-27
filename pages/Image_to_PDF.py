@@ -1,4 +1,4 @@
-# Receipt.png file to 'searchable' pdf file
+-# Receipt.png file to 'searchable' pdf file
 import streamlit as st
 import os
 
@@ -12,6 +12,11 @@ for uploaded_file in uploaded_files:
 ## first file in current dir (with full path)
 file = os.path.join(os.getcwd(), os.listdir(os.getcwd())[0])
 st.write("TEST RESULT PATH:",file)
+
+@st.cache(allow_output_mutation=True)
+def get_static_store() -> Dict:
+    """This dictionary is initialized once and can be used to store the files uploaded"""
+    return {}
 
 def file_selector(folder_path):
     filenames = os.listdir(folder_path)
