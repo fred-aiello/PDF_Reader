@@ -1,6 +1,7 @@
 # Receipt.png file to 'searchable' pdf file
 import streamlit as st
 import os
+from typing import Dict
 
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
