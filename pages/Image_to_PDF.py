@@ -1,4 +1,4 @@
--# Receipt.png file to 'searchable' pdf file
+# Receipt.png file to 'searchable' pdf file
 import streamlit as st
 import os
 
