@@ -18,7 +18,7 @@ st.write("TEST RESULT PATH:",file)
 
 @st.cache(allow_output_mutation=True)
 def get_static_store() -> Dict:
-    """This dictionary is initialized once and can be used to store the files uploaded"""
+    "This dictionary is initialized once and can be used to store the files uploaded"
     return {}
 
 def file_selector(folder_path):
